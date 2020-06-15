@@ -1,4 +1,4 @@
-# Hardware
+# Devices
 Netgear Router
 * Brother Laserprinter
 * Denon HEOS Multiroom Soundsystem
