@@ -1,0 +1,136 @@
+# Automation
+################################################################################
+automation:
+- alias: Dishwasher - 01 - Set to Programmed
+  trigger:
+  - above: '0'
+    entity_id: sensor.kitchen_dishwasher_power
+    platform: numeric_state
+
+  condition:
+  - condition: state
+    entity_id: input_select.dishwasher_status
+    state: Power Off
+
+  action:
+  - data:
+      entity_id: input_select.dishwasher_status
+      option: Programmed
+    service: input_select.select_option
+
+
+- alias: Dishwasher - 00 - Set to Power Off
+  trigger:
+  - below: '0.1'
+    entity_id: sensor.kitchen_dishwasher_power
+    for: 00:00:10
+    platform: numeric_state
+
+  action:
+  - data:
+      entity_id: input_select.dishwasher_status
+      option: Power Off
+    service: input_select.select_option
+
+
+- alias: Dishwasher - 02 - Set to Running
+  trigger:
+  - above: '10'
+    entity_id: sensor.kitchen_dishwasher_power
+    for: 00:00:05
+    platform: numeric_state
+
+  condition:
+  - condition: state
+    entity_id: input_select.dishwasher_status
+    state: Programmed
+
+  action:
+  - data:
+      entity_id: input_select.dishwasher_status
+      option: Running
+    service: input_select.select_option
+
+
+- alias: Dishwasher - 03 - Set to Drying
+  trigger:
+  - below: '5'
+    entity_id: sensor.kitchen_dishwasher_power
+    for: 00:01:00
+    platform: numeric_state
+
+  condition:
+  - condition: state
+    entity_id: input_select.dishwasher_status
+    state: Running
+
+  action:
+  - data:
+      entity_id: input_select.dishwasher_status
+      option: Drying
+    service: input_select.select_option
+
+
+- alias: Dishwasher - 04 - Set to Finished
+  trigger:
+  - below: '0.1'
+    entity_id: sensor.kitchen_dishwasher_power
+    platform: numeric_state
+
+  condition:
+  - condition: state
+    entity_id: input_select.dishwasher_status
+    state: Drying
+
+  action:
+  - data:
+      entity_id: input_select.dishwasher_status
+      option: Finished
+    service: input_select.select_option
+
+  - data:
+      scene_id: dishwasher_before
+      snapshot_entities:
+      - light.livingroom_sideboard_light
+      - light.livingroom_tv_light
+    service: scene.create
+
+  - scene: scene.dishwasher_finished
+
+
+# Set the green light back to the state before.
+- alias: Dishwasher - 05 - Restore Scene
+  trigger:
+  - device_id: 51ccd17fed814229987351d66886ba0f
+    domain: binary_sensor
+    entity_id: binary_sensor.test_vibration_sensor
+    platform: device
+    type: motion
+
+  condition:
+  - condition: state
+    entity_id: input_select.dishwasher_status
+    state: Finished
+
+  action:
+  - data:
+      option: Power Off
+    entity_id: input_select.dishwasher_status
+    service: input_select.select_option
+  - entity_id: scene.dishwasher_before
+    service: scene.turn_on
+
+
+
+# Input Select
+################################################################################
+input_select:
+  dishwasher_status:
+    name: Dishwasher Status
+    options:
+      - Power Off
+      - Programmed
+      - Running
+      - Drying
+      - Finished
+    initial: Power Off

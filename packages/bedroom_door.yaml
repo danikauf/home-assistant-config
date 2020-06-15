@@ -1,0 +1,23 @@
+# Binary Sensor
+################################################################################
+binary_sensor:
+  - platform: template
+    sensors: 
+      bedroom_door_status:
+        device_class: door
+        friendly_name: 'Bedroom Door'
+        value_template: >
+          {{ is_state('sensor.bedroom_door_access_control', '22') if states('sensor.bedroom_door_access_control') in ['22','23'] else states('sensor.bedroom_door_status') }}
+
+
+
+# Sensor
+################################################################################
+sensor:
+  - platform: template
+    sensors:
+      bedroom_door_last_change:
+        device_class: timestamp
+        friendly_name: 'Last Change'
+        value_template: >
+          {{ as_timestamp(states.binary_sensor.bedroom_door_status.last_changed) | timestamp_local }}

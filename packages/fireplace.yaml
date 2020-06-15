@@ -1,0 +1,22 @@
+# REST Command
+################################################################################
+rest_command:
+  hue_fireplace:
+    url: http://192.168.1.11/api/Ad0fEeCOFPcbkExy7HhzXVYflzPDmTBNdJ5aX18D/sensors/56
+    method: PUT
+    payload: '{"state":{"status":1}}'
+    content_type:  'application/json; charset=utf-8'
+
+
+
+# Switch
+################################################################################
+switch:
+  - platform: rest
+    resource: http://192.168.1.11/api/Ad0fEeCOFPcbkExy7HhzXVYflzPDmTBNdJ5aX18D/sensors/56
+    method: PUT
+    body_on: '{"state":{"status":1}}'
+    body_off: '{"state":{"status":0}}'
+    is_on_template: '{% if ( my_test_json.state.status == 1) %}true{% else %}false{% endif %}'
+    headers:
+      content-type: application/json

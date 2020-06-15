@@ -1,0 +1,14 @@
+# Light
+################################################################################
+light:
+  - platform: switch
+    name: Dining Light
+    entity_id: switch.dining_light_switch
+
+  - platform: switch
+    name: Entry Light
+    entity_id: switch.entry_light_switch
+
+  - platform: switch
+    name: Kitchen Light
+    entity_id: switch.kitchen_light_switch

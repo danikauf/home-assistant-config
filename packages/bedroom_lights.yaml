@@ -1,0 +1,91 @@
+# Automation
+################################################################################
+automation:
+- alias: Bedroom Light Dani - Toggle
+  trigger:
+  - device_id: deab2813792a4c3094815bf2a01f097c
+    domain: deconz
+    platform: device
+    subtype: turn_on
+    type: remote_button_short_press
+
+  action:
+  - device_id: fce7a39dfc86411bb7e5adfffc80ba5d
+    domain: light
+    entity_id: light.bedroom_light_dani
+    type: toggle
+
+
+- alias: Bedroom Light Dani - Decrease Brightness
+  trigger:
+  - device_id: deab2813792a4c3094815bf2a01f097c
+    domain: deconz
+    platform: device
+    subtype: right
+    type: remote_button_rotated
+
+  action:
+  - device_id: fce7a39dfc86411bb7e5adfffc80ba5d
+    domain: light
+    entity_id: light.bedroom_light_dani
+    type: brightness_decrease
+
+
+- alias: Bedroom Light Dani - Increase Brightness
+  trigger:
+  - device_id: deab2813792a4c3094815bf2a01f097c
+    domain: deconz
+    platform: device
+    subtype: left
+    type: remote_button_rotated
+
+  action:
+  - device_id: fce7a39dfc86411bb7e5adfffc80ba5d
+    domain: light
+    entity_id: light.bedroom_light_dani
+    type: brightness_increase
+
+
+- alias: Bedroom Light Gizem - Toggle
+  trigger:
+  - device_id: 01f1147cd2c84edc85536285a66c96fa
+    domain: deconz
+    platform: device
+    subtype: turn_on
+    type: remote_button_short_press
+
+  action:
+  - device_id: a46d05b866c3474a9f8a27afc75ece12
+    domain: light
+    entity_id: light.bedroom_light_gizem
+    type: toggle
+
+
+- alias: Bedroom Light Gizem - Increase Brightness
+  trigger:
+  - device_id: 01f1147cd2c84edc85536285a66c96fa
+    domain: deconz
+    platform: device
+    subtype: left
+    type: remote_button_rotated
+
+  action:
+  - device_id: a46d05b866c3474a9f8a27afc75ece12
+    domain: light
+    entity_id: light.bedroom_light_gizem
+    type: brightness_increase
+
+
+- alias: Bedroom Light Gizem - Decrease Brightness
+  trigger:
+  - device_id: 01f1147cd2c84edc85536285a66c96fa
+    domain: deconz
+    platform: device
+    subtype: right
+    type: remote_button_rotated
+
+  action:
+  - device_id: a46d05b866c3474a9f8a27afc75ece12
+    domain: light
+    entity_id: light.bedroom_light_gizem
+    type: brightness_decrease

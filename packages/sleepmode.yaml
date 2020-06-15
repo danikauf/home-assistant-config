@@ -1,0 +1,45 @@
+# Automation
+################################################################################
+automation:
+- alias: SleepMode - 00 - Turn On
+  trigger:
+  - entity_id: binary_sensor.bedroom_motion_motion
+    platform: state
+    to: 'on'
+
+  condition:
+  - condition: state
+    entity_id: binary_sensor.bedroom_door_status
+    state: 'off'
+  - after: '22:00'
+    before: 06:00
+    condition: time
+
+  action:
+  - data:
+      entity_id: input_boolean.sleep_mode
+    service: input_boolean.turn_on
+
+
+- alias: SleepMode - 01 - Turn Off
+  trigger:
+  - entity_id: binary_sensor.bedroom_door_status
+    for: 00:00:30
+    from: 'off'
+    platform: state
+    to: 'on'
+
+  action:
+  - data:
+      entity_id: input_boolean.sleep_mode
+    service: input_boolean.turn_off
+
+
+
+# Input Boolean
+################################################################################
+input_boolean:
+  sleep_mode:
+    name: Sleep Mode
+    initial: off
+    icon: mdi:bed-empty

@@ -1,0 +1,58 @@
+# Automation
+################################################################################
+automation:
+# Only turn the light on when no one or just one person at home.
+- alias: Entry Light On When Door Opens
+  trigger:
+  - platform: state
+    entity_id: binary_sensor.entry_door_status
+    from: 'off'
+    to: 'on'
+
+  condition:
+  - condition: template
+    value_template: '{{ not (is_state("input_boolean.presence_dani", "on") and is_state("input_boolean.presence_gizem",
+      "on"))}}'
+
+  action:
+  - service: light.turn_on
+    entity_id: light.entry_light
+
+
+- alias: Entry Light Off After 1min
+  trigger:
+  - platform: state
+    entity_id: binary_sensor.entry_door_status
+    from: 'on'
+    to: 'off'
+    for: 00:01:00
+
+  action:
+  - service: light.turn_off
+    entity_id: light.entry_light
+
+
+
+# Binary Sensor
+################################################################################
+binary_sensor:
+  - platform: template
+    sensors: 
+      entry_door_status:
+        device_class: door
+        friendly_name: 'Entry Door'
+        value_template: >
+          {{ is_state('sensor.entry_door_access_control', '22') if states('sensor.entry_door_access_control') in ['22','23'] else states('sensor.entry_door_status') }}
+
+
+
+# Sensor
+################################################################################
+sensor:
+  - platform: template
+    sensors:
+      entry_door_last_change:
+        device_class: timestamp
+        friendly_name: 'Last Change'
+        value_template: >
+          {{ as_timestamp(states.binary_sensor.entry_door_status.last_changed) | timestamp_local }}

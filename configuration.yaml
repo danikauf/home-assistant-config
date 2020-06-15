@@ -1,0 +1,98 @@
+homeassistant:
+  packages:
+    # Activate/Deactivate Sleepmode
+    bedroom_door: !include packages/bedroom_door.yaml
+    
+    # Control and dim bedside lamps
+    bedroom_lights: !include packages/bedroom_lights.yaml
+    
+    # Measure power to make Dishwasher smart
+    dishwasher: !include packages/dishwasher.yaml
+    
+    # Turn entry light on and off
+    entry_door: !include packages/entry_door.yaml
+    
+    # Enable fireplace video on TV an Hue candel light formula
+    fireplace: !include packages/fireplace.yaml
+
+    # Detect if someone is home
+    presence: !include packages/presence.yaml
+    
+    # NOT_IN_USE
+    #reduit_door: !include packages/reduit_door.yaml
+    
+    # Enable/Disable sleep mode
+    sleepmode: !include packages/sleepmode.yaml
+
+    # Create light entities from in-wall switches
+    switch2light: !include packages/switch2light.yaml
+
+automation: !include automations.yaml
+
+config:
+
+device_tracker:
+  - platform: netgear
+    password: !secret router_password
+    interval_seconds: 10
+    consider_home: 60
+    new_device_defaults:
+      track_new_devices: false
+
+frontend:
+  themes: !include_dir_merge_named themes
+
+# Google Calendar
+google:
+  client_id: !secret google_calendar_client_id
+  client_secret: !secret google_calendar_client_secret
+
+group: !include groups.yaml
+
+heos:
+  host: 192.168.1.53
+
+history:
+
+# Uncomment this if you are using SSL/TLS, running in Docker container, etc.
+# http:
+#   base_url: example.duckdns.org:8123
+
+logbook:
+
+map:
+
+# Extract Youtube Streams for Chromecast
+media_extractor:
+
+mobile_app:
+
+#netatmo:
+#  api_key: !secret netatmo_api_key
+#  secret_key: !secret netatmo_secret_key
+#  username: !secret netatmo_username
+#  password: !secret netatmo_password
+
+person:
+
+scene: !include scenes.yaml
+
+script: !include scripts.yaml
+
+ssdp:
+
+sun:
+
+system_health:
+
+tts:
+  - platform: google_translate
+
+updater:
+
+# Wake Workstation
+wake_on_lan:
+
+zeroconf:
+
+zone:

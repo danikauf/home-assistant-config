@@ -1,0 +1,122 @@
+# Automation
+################################################################################
+automation:
+- alias: Presence - Dani - 00 - Set Home
+  trigger:
+  - entity_id: device_tracker.galaxy_s8
+    from: not_home
+    platform: state
+    to: home
+
+  condition:
+  - condition: state
+    entity_id: input_boolean.presence_dani
+    state: 'off'
+
+  action:
+  - data:
+      entity_id: input_boolean.presence_dani
+    service: input_boolean.turn_on
+
+
+- alias: Presence - Dani - 01 - Set Away
+  trigger:
+  - entity_id: device_tracker.galaxy_s8
+    from: home
+    platform: state
+    to: not_home
+
+  condition:
+  - condition: template
+    value_template: '{{ (as_timestamp(now()) - as_timestamp(states.binary_sensor.entry_door_status.last_changed))
+      | int < 300 }}'
+
+  action:
+  - data:
+      entity_id: input_boolean.presence_dani
+    service: input_boolean.turn_off
+
+
+- alias: Presence - Gizem - 00 - Set Home
+  trigger:
+  - entity_id: device_tracker.gizem
+    from: not_home
+    platform: state
+    to: home
+
+  condition:
+  - condition: state
+    entity_id: input_boolean.presence_gizem
+    state: 'off'
+
+  action:
+  - data:
+      entity_id: input_boolean.presence_gizem
+    service: input_boolean.turn_on
+
+
+- alias: Presence - Gizem - 01 - Set Away
+  trigger:
+  - entity_id: device_tracker.gizem
+    from: home
+    platform: state
+    to: not_home
+
+  condition:
+  - condition: template
+    value_template: '{{ (as_timestamp(now()) - as_timestamp(states.binary_sensor.entry_door_status.last_changed))
+      | int < 300 }}'
+
+  action:
+  - data:
+      entity_id: input_boolean.presence_gizem
+    service: input_boolean.turn_off
+
+
+- alias: Presence - Gizem - 02 - Set Away Fallback
+  trigger:
+  - entity_id: binary_sensor.entry_door_status
+    from: 'on'
+    platform: state
+    to: 'off'
+
+  condition:
+  - condition: template
+    value_template: '{{ (as_timestamp(now()) - as_timestamp(states.device_tracker.samsung_galaxy_s7.last_changed))
+      | int < 300 }}'
+
+  action:
+  - data:
+      entity_id: input_boolean.presence_gizem
+    service: input_boolean.turn_off
+
+
+
+# Input Boolean
+################################################################################
+input_boolean:
+  presence_dani:
+    name: Dani
+    initial: off
+    icon: mdi:account
+
+  presence_gizem:
+    name: Gizem
+    initial: off
+    icon: mdi:account
+
+  presence_someone:
+    name: Someone
+    initial: off
+    icon: mdi:account
+
+
+
+# Input Select
+################################################################################
+input_select:
+  occupancy_home:
+    name: Home
+    options:
+      - Free
+      - Occupied
