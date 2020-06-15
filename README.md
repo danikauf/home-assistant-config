@@ -1,6 +1,7 @@
 # Hardware
 Netgear Router
 * Brother Laserprinter
+* Denon HEOS Multiroom Soundsystem
 * Nvidia Shield
 * Philips Hue Bridge
   * Hue Color E27
