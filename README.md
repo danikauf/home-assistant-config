@@ -4,6 +4,7 @@ Netgear Router
 * Brother MFC-L3770CDW Printer
 * Denon HEOS Multiroom Soundsystem
 * [Fitbit Charge 3]
+* [Netatmo Smart Home Weather Station]
 * Nvidia Shield TV 2017
 * Philips Hue Bridge Gen2
   * Hue Beeing Lamp
