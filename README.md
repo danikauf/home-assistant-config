@@ -15,7 +15,7 @@ Netgear Router
   * [Hue Motion Sensor](https://www2.meethue.com/en-us/p/hue-motion-sensor/046677473389)
   * [Hue White Ambiance Bulb](https://www2.meethue.com/en-us/p/hue-white-ambiance-single-bulb-e12/046677468927)
   * [Sunricher Zigbee AC In-Wall Switch](https://www.sunricher.com/zigbee-ac-in-wall-switch-sr-zg9101sac-hp-switch.html)
-  * [Tradfri Wireless Control Outlet]
+  * [Tradfri Wireless Control Outlet](https://www.ikea.com/us/en/p/tradfri-wireless-control-outlet-30356169)
 * [Raspberry Pi 3B+](https://www.raspberrypi.org/products/raspberry-pi-3-model-b-plus)
   * [Aeotec Z-Stick Gen5](https://aeotec.com/z-wave-usb-stick/)
     * [Fibaro Door Window Sensor 2](https://www.fibaro.com/en/products/door-window-sensor)
