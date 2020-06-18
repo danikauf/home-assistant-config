@@ -3,8 +3,8 @@ Netgear Router
 * Android Phones
 * Brother MFC-L3770CDW Printer
 * Denon HEOS Multiroom Soundsystem
-  * HEOS Bar https://www.denon.com/en-gb/shop/amplifiersmrs/heosbar
-  * HEOS 1 HS2 https://www.denon.com/en-gb/shop/speakers/heos1hs2
+  * [HEOS Bar](https://www.denon.com/en-gb/shop/amplifiersmrs/heosbar)
+  * [HEOS 1 HS2](https://www.denon.com/en-gb/shop/speakers/heos1hs2)
 * [Fitbit Charge 3]
 * [Netatmo Smart Home Weather Station]
 * Nvidia Shield TV 2017
