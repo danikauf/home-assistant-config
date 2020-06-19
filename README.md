@@ -3,6 +3,7 @@ Netgear Router
 * [Brother MFC-L3770CDW Printer](https://www.brother.co.uk/printers/laser-printers/mfc-l3770cdw)
 * Denon HEOS Multiroom Soundsystem
   * [HEOS Bar](https://www.denon.com/en-gb/shop/amplifiersmrs/heosbar)
+    * Builtin Chromecast
   * [HEOS 1 HS2](https://www.denon.com/en-gb/shop/speakers/heos1hs2)
 * [Fitbit Charge 3](https://www.fitbit.com/eu/charge3)
 * [Netatmo Smart Home Weather Station](https://www.netatmo.com/en-us/weather/weatherstation)
@@ -32,5 +33,6 @@ Netgear Router
   * [Galaxy S8](https://www.samsung.com/us/support/owners/product/galaxy-s8-unlocked#productInfo)
 * [Shelly 2.5 WiFi-Switch](https://shelly.cloud/products/shelly-25-smart-home-automation-relay)
 * [Sony KD-65XF9005 TV](https://www.sony.co.uk/electronics/support/televisions-projectors-lcd-tvs-android-/kd-65xf9005/specifications)
+  * Builtin Chromecast
 * [Withings WS-50 Scale](https://support.withings.com/hc/en-us/categories/200118207-Smart-Body-Analyzer-WS-50-)
 * [Xiaomi Roborock S6 Vacuum](https://us.roborock.com/pages/roborock-s6)
