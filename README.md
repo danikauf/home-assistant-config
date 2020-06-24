@@ -26,6 +26,7 @@ Netgear Router
     * [Aqara Door and Window Sensor](https://www.aqara.com/us/door_and_window_sensor.html)
     * [Aqara Temperature and Humidity Sensor](https://www.aqara.com/us/temperature_humidity_sensor.html)
     * [Aqara Vibration Sensor](https://www.aqara.com/us/vibration_sensor.html)
+    * [Hue Motion Sensor](https://www2.meethue.com/en-us/p/hue-motion-sensor/046677473389)
     * [IKEA Symfonisk Sound Remote](https://www.ikea.com/us/en/p/symfonisk-sound-remote-black-10433847)
     * [IKEA Tradfri LED Bulb E14](https://www.ikea.com/us/en/p/tradfri-led-bulb-e12-400-lumen-wireless-dimmable-warm-white-chandelier-opal-40365267)
 * Samsung Android Phones
