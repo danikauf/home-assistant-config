@@ -15,7 +15,6 @@ Netgear Router
   * [Hue Lightstrip](https://www2.meethue.com/en-us/p/hue-white-and-color-ambiance-lightstrip-plus-base-pack/719015548)
   * [Hue Motion Sensor](https://www2.meethue.com/en-us/p/hue-motion-sensor/046677473389)
   * [Hue White Ambiance Bulb](https://www2.meethue.com/en-us/p/hue-white-ambiance-single-bulb-e12/046677468927)
-  * [Sunricher Zigbee AC In-Wall Switch](https://www.sunricher.com/zigbee-ac-in-wall-switch-sr-zg9101sac-hp-switch.html)
   * [Tradfri Wireless Control Outlet](https://www.ikea.com/us/en/p/tradfri-wireless-control-outlet-30356169)
 * [Raspberry Pi 3B+](https://www.raspberrypi.org/products/raspberry-pi-3-model-b-plus)
   * [Aeotec Z-Stick Gen5](https://aeotec.com/z-wave-usb-stick/)
@@ -29,6 +28,7 @@ Netgear Router
     * [Hue Motion Sensor](https://www2.meethue.com/en-us/p/hue-motion-sensor/046677473389)
     * [IKEA Symfonisk Sound Remote](https://www.ikea.com/us/en/p/symfonisk-sound-remote-black-10433847)
     * [IKEA Tradfri LED Bulb E14](https://www.ikea.com/us/en/p/tradfri-led-bulb-e12-400-lumen-wireless-dimmable-warm-white-chandelier-opal-40365267)
+    * [Sunricher Zigbee AC In-Wall Switch](https://www.sunricher.com/zigbee-ac-in-wall-switch-sr-zg9101sac-hp-switch.html)
 * Samsung Android Phones
   * [Galaxy S7](https://www.samsung.com/us/support/owners/product/galaxy-s7-unlocked#productInfo)
   * [Galaxy S8](https://www.samsung.com/us/support/owners/product/galaxy-s8-unlocked#productInfo)
