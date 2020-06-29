@@ -30,8 +30,8 @@ Netgear Router
     * [IKEA Tradfri LED Bulb E14](https://www.ikea.com/us/en/p/tradfri-led-bulb-e12-400-lumen-wireless-dimmable-warm-white-chandelier-opal-40365267)
     * [Sunricher Zigbee AC In-Wall Switch](https://www.sunricher.com/zigbee-ac-in-wall-switch-sr-zg9101sac-hp-switch.html)
 * Samsung Android Phones
-  * [Galaxy S7](https://www.samsung.com/us/support/owners/product/galaxy-s7-unlocked#productInfo)
   * [Galaxy S8](https://www.samsung.com/us/support/owners/product/galaxy-s8-unlocked#productInfo)
+  * [Galaxy S20+](https://www.samsung.com/us/mobile/phones/galaxy-s/galaxy-s20-plus-5g-128gb-unlocked-sm-g986uzkaxaa/#specs)
 * [Shelly 2.5 WiFi-Switch](https://shelly.cloud/products/shelly-25-smart-home-automation-relay)
 * [Sony KD-65XF9005 TV](https://www.sony.co.uk/electronics/support/televisions-projectors-lcd-tvs-android-/kd-65xf9005/specifications)
   * Builtin Chromecast
