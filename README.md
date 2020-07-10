@@ -1,5 +1,7 @@
 # Devices
 Netgear Router
+* [Apple iPad 10.2](https://www.apple.com/ipad-10.2/)
+* [Apple iPhone 11](https://www.apple.com/iphone-11)
 * [Brother MFC-L3770CDW Printer](https://www.brother.co.uk/printers/laser-printers/mfc-l3770cdw)
 * Denon HEOS Multiroom Soundsystem
   * [HEOS Bar](https://www.denon.com/en-gb/shop/amplifiersmrs/heosbar)
@@ -29,9 +31,7 @@ Netgear Router
     * [IKEA Symfonisk Sound Remote](https://www.ikea.com/us/en/p/symfonisk-sound-remote-black-10433847)
     * [IKEA Tradfri LED Bulb E14](https://www.ikea.com/us/en/p/tradfri-led-bulb-e12-400-lumen-wireless-dimmable-warm-white-chandelier-opal-40365267)
     * [Sunricher Zigbee AC In-Wall Switch](https://www.sunricher.com/zigbee-ac-in-wall-switch-sr-zg9101sac-hp-switch.html)
-* Samsung Android Phones
-  * [Galaxy S8](https://www.samsung.com/us/support/owners/product/galaxy-s8-unlocked#productInfo)
-  * [Galaxy S20+](https://www.samsung.com/us/mobile/phones/galaxy-s/galaxy-s20-plus-5g-128gb-unlocked-sm-g986uzkaxaa/#specs)
+* [Samsung Galaxy S20+](https://www.samsung.com/us/mobile/phones/galaxy-s/galaxy-s20-plus-5g-128gb-unlocked-sm-g986uzkaxaa/#specs)
 * [Shelly 2.5 WiFi-Switch](https://shelly.cloud/products/shelly-25-smart-home-automation-relay)
 * [Sony KD-65XF9005 TV](https://www.sony.co.uk/electronics/support/televisions-projectors-lcd-tvs-android-/kd-65xf9005/specifications)
   * Builtin Chromecast
